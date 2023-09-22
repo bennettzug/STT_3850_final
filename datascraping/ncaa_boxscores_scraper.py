@@ -8,7 +8,7 @@ import random
 import math
 
 def get_html(url):
-    resp = httpx.get(url)
+    resp = httpx.get(url,timeout=None)
     return HTMLParser(resp.text)
 
 def make_dict(basic_table, adv_table):
